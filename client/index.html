@@ -27,25 +27,40 @@
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-12 border">
-                    <div>PUT A FORM IN HERE</div>
+                    <div>
+                        <form action="assets/js/api/usgs.js">
+                            <div class="mb-3">
+                                <h5>Where do you want to search?</h5>
+                                <label for="locationSearchInput" class="form-label">Enter a Location</label>
+                                <input type="text" class="form-control" id="locationSearchInput" placeholder="City, State/Province">
+                            </div>
+                            <div class="mb-3">
+                                <h5>Enter a Date Range</h5>
+                                <label for="startDateInput">Start:</label>
+                                <input class="form-control" type="date" id="startDateInput" name="startDateInput">
+                                <label for="endDateInput">End:</label>
+                                <input class="form-control" type="date" id="endDateInput" name="endDateInput">
+                            </div>
+                            <div class="mb-3">
+                                <h5>How far do you want to search?</h5>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Choose a site radius</option>
+                                    <option value="1">1km</option>
+                                    <option value="5">5km</option>
+                                    <option value="10">10km</option>
+                                    <option value="25">25km</option>
+                                  </select>
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit">
+                            </div>
+                          </form>
+                    </div>
                 </div>
                 <div class="col l8 m8 s12 border">
-                    <div>PUT A MAP IN HERE</div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+                    <div>
+                        PUT A MAP IN HERE
+                    </div>
                 </div>
             </div>
             <div class="row">
