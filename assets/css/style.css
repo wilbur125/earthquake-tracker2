@@ -1,0 +1,49 @@
+body {
+  background-color: #FFA384 !important;
+  height: 100vh;
+}
+
+.main-container {
+  background-color: #E0FFFB;
+  min-height: 100%;
+  border-left: thick double #4093A4;
+  border-right: thick double #4093A4;
+}
+
+.rubik-distressed-font {
+    font-family: 'Rubik Distressed', cursive;
+    color: #103E5B;
+}
+
+.rubik-font {
+  font-family: 'Rubik', sans-serif;
+  color: #103E5B;
+}
+
+.btn-group-height {
+    height: 100%;
+}
+
+.btn-outline-info {
+  color: #103E5B !important;
+}
+
+#map {
+  height: 55vh;
+  width: 100%; 
+  border-radius: 5px;
+  }
+
+.footer {
+  height: 60px;
+  color: #103E5B;
+}
+
+@media (min-width: 992px) {
+  .footer {
+    position: absolute !important;
+    bottom:0 !important;
+    left: 0 !important;
+    width: 100%;
+  }
+}
