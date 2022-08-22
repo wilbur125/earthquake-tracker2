@@ -29,7 +29,7 @@ body {
 }
 
 #map {
-  height: 55vh;
+  height: 85vh;
   width: 100%; 
   border-radius: 5px;
   }
@@ -39,7 +39,7 @@ body {
   color: #103E5B;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1500px) {
   .footer {
     position: absolute !important;
     bottom:0 !important;
