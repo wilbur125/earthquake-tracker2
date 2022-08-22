@@ -11,6 +11,12 @@ async function fetchRecentQuakes() {
 
 
 fetchRecentQuakes().then(recentQuakes => {
+    const quakeTime1 = recentQuakes.features[0].properties.time;
+    const quakeMoment1 = new Date(quakeTime1);
+    const quakeTime2 = recentQuakes.features[1].properties.time;
+    const quakeMoment2 = new Date(quakeTime2);
+    const quakeTime3 = recentQuakes.features[2].properties.time;
+    const quakeMoment3 = new Date(quakeTime3);
     recentRumbles.innerHTML = 
             `
                 <div class="col-lg-12">
@@ -19,8 +25,9 @@ fetchRecentQuakes().then(recentQuakes => {
                         <label class="btn btn-outline-info" for="btnradio1" onclick="radioUpdate1()" checked>
                             <div class="card-body">
                                 <h5 class="card-title">${recentQuakes.features[0].properties.place}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted fw-bold">${quakeMoment1}</h6>
                                 <h6 class="card-subtitle mb-2 text-muted fw-bold">Magnitude: ${recentQuakes.features[0].properties.mag}</h6>
-                                <p class="card-subtitle mb-2 text-muted" id="latValue1">Latitude: ${recentQuakes.features[0].geometry.coordinates[1]} </p>
+                                <p class="card-subtitle mb-2 text-muted" id="latValue1">Latitude: ${recentQuakes.features[0].geometry.coordinates[1]}</p>
                                 <p class="card-subtitle mb-2 text-muted" id="lngValue1">Longitude: ${recentQuakes.features[0].geometry.coordinates[0]}</p>
                             </div>
                         </label>
@@ -32,6 +39,7 @@ fetchRecentQuakes().then(recentQuakes => {
                         <label class="btn btn-outline-info" for="btnradio2" onclick="radioUpdate2()">
                             <div class="card-body">
                                 <h5 class="card-title">${recentQuakes.features[1].properties.place}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted fw-bold">${quakeMoment2}</h6>
                                 <h6 class="card-subtitle mb-2 text-muted fw-bold">Magnitude: ${recentQuakes.features[1].properties.mag}</h6>
                                 <p class="card-subtitle mb-2 text-muted" id="latValue2">Latitude: ${recentQuakes.features[1].geometry.coordinates[1]} </p>
                                 <p class="card-subtitle mb-2 text-muted" id="lngValue2">Longitude: ${recentQuakes.features[1].geometry.coordinates[0]}</p>
@@ -45,6 +53,7 @@ fetchRecentQuakes().then(recentQuakes => {
                         <label class="btn btn-outline-info" for="btnradio3" onclick="radioUpdate3()">
                             <div class="card-body">
                                 <h5 class="card-title">${recentQuakes.features[2].properties.place}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted fw-bold">${quakeMoment3}</h6>
                                 <h6 class="card-subtitle mb-2 text-muted fw-bold">Magnitude: ${recentQuakes.features[2].properties.mag}</h6>
                                 <p class="card-subtitle mb-2 text-muted" id="latValue3">Latitude: ${recentQuakes.features[2].geometry.coordinates[1]} </p>
                                 <p class="card-subtitle mb-2 text-muted" id="lngValue3">Longitude: ${recentQuakes.features[2].geometry.coordinates[0]}</p>
@@ -84,7 +93,6 @@ function initMap(lat = lat1, lng = lng1) {
 
 function radioUpdate1() {
     initMap(lat1, lng1);
-
 }
 
 function radioUpdate2() {
