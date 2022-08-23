@@ -39,7 +39,7 @@ body {
   color: #103E5B;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 2000px) {
   .footer {
     position: absolute !important;
     bottom:0 !important;
